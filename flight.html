@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      * {
+        /* border: 1px solid black; */
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        color: #2f2c2c;
+      }
+      table {
+        width: 100%;
+        margin: 0;
+        border-spacing: 0;
+      }
+      td {
+        padding: 0;
+      }
+      .container {
+        width: 100%;
+      }
+      /* .header{
+        background-color: #FCFCFC;
+      } */
+      .headerText {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 42px;
+        color: #2f2c2c;
+        margin-bottom: 32px;
+      }
+      .logo {
+        width: 123px;
+      }
+      .print-btn {
+        border: 1px solid #ff5e0d;
+        border-radius: 5px;
+        background-color: #ff5e0d;
+        /* padding: 10px 20px; */
+        width: 175px;
+        height: 65px;
+        /* margin-bottom: 80px; */
+      }
+      .big-p {
+        font-size: 24px;
+        color: #2f2c2c;
+        font-weight: 500;
+      }
+      .small-p {
+        font-size: 16px;
+        color: #2f2c2c;
+        font-weight: 500;
+      }
+      .padding {
+        padding: 0 90px !important;
+      }
+      .flex {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+      }
+      .flex-style {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+      }
+      .shadow {
+        box-shadow: 0 0 25px -26px #000000;
+      }
+      .print-icon {
+        width: 21px;
+        height: 21px;
+      }
+      .plane-icon {
+        width: 24px;
+        height: 22px;
+        margin-top: 5px;
+      }
+      .full-width {
+        width: 24%;
+      }
+      .hotel-width {
+        width: 40%;
+      }
+      .hotel-text-width {
+        width: 60%;
+      }
+      .airline-icon {
+        width: 33px;
+        height: 33px;
+      }
+      .tiny-p {
+        font-size: 12px;
+        font-family: "lato";
+      }
+      .small-padd {
+        padding: 30px 90px !important;
+      }
+      .grey {
+        color: #837c7c;
+      }
+      .padd {
+        padding: 30px 0;
+      }
+      .topMargin {
+        margin-top: 10px;
+      }
+      .stopover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .hide {
+        display: none;
+      } .bar {
+        width: 116px;
+        margin: 8px 0;
+        border: 1px solid rgba(255, 94, 13, 0.3);
+      }
+      .table-text {
+        font-size: 16px;
+        color: #2f2c2c;
+        font-weight: 400;
+        line-height: 21px;
+      }
+      .table-header {
+        font-size: 18px;
+        color: #2f2c2c;
+        font-weight: 700;
+        line-height: 23px;
+      }
+      .hotel-header {
+        font-size: 24px;
+        color: #2f2c2c;
+        font-weight: 700;
+        line-height: 33px;
+      }
+      .hotel-text {
+        font-size: 20px;
+        color: #2f2c2c;
+        font-weight: 400;
+        line-height: 25px;
+      }
+      .fare-text {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 41.66px;
+        color: #2f2c2c;
+      }
+      .passenger-margin {
+        margin-top: 48px;
+      }
+      .table-padding {
+        padding: 10px 90px;
+      }
+      .table-head-padding {
+        padding: 0 90px !important;
+      }
+      .contact-p {
+        font-size: 18px;
+        color: #2f2c2c;
+        line-height: 31px;
+        font-weight: 700;
+      }
+      .hotel-btn {
+        color: #ffffff !important;
+        background-color: #ff5e0d;
+        border: 1px solid #ff5e0d;
+        width: 100%;
+        border-radius: 3px;
+        padding: 10px 30px;
+        font-family: lato;
+      }
+      
+      
+      @media only screen and (max-width: 860px) {
+        .headerText {
+          font-size: 16px !important;
+          line-height: 20px !important;
+        }
+        .header {
+          background-color: #fcfcfc;
+        }
+        .logo {
+          width: 66px;
+        }
+        .big-p {
+          font-size: 16px;
+        }
+        .small-p {
+          font-size: 14px;
+        }
+        /* .flex {
+          flex-direction: column;
+          gap: 5px;
+        } */
+        .padding {
+          padding: 0 20px !important;
+        }
+        .print-btn {
+          width: 97px !important;
+          height: 40px !important;
+        }
+        .print-icon {
+          width: 14px;
+          height: 14px;
+        }
+        .plane-icon {
+          width: 12px;
+          height: 11px;
+        }
+        .small-padd {
+          padding: 15px 20px !important;
+        }
+        .airline-icon {
+          width: 16px;
+          height: 16px;
+        }
+        .full-width {
+          width: 100%;
+        }
+        .hotel-width {
+          width: 0%;
+        }
+        .hotel-text-width {
+          width: 100%;
+          padding: 0px 40px;
+        }
+        /* .mobile-align {
+          text-align: left !important;
+        } */
+        .padd {
+          padding: 0;
+        }
+        .topMargin {
+          margin-top: 0;
+        }
+        /* .stopover {
+          align-items: flex-start !important;
+        } */
+        .hide {
+          display: block;
+        }
+        .table-text {
+          font-size: 12px;
+          color: #424950;
+          font-weight: 400;
+          line-height: 16px;
+        }
+        .table-header {
+          font-size: 14px;
+          color: #2f2c2c;
+          line-height: 18px;
+        }
+        .fare-text {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 20.83px;
+          color: #424950;
+        }
+        .passenger-margin {
+          margin-top: 24px;
+        }
+        .table-padding {
+          padding: 10px 20px;
+        }
+        .contact-p {
+          font-size: 16px;
+          color: #2f2c2c;
+          line-height: 18px;
+          font-weight: 400;
+        }
+        .hotel-btn{
+          padding: 5px 30px;
+          color: #ffffff;
+        }
+        
+        .hide-image {
+        display: none !important;
+      }
+      }
+
+      @media only screen and (max-width: 600px) {
+        .outer {
+          background-color: #fcfcfc;
+        }
+
+        .headerText {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .logo {
+          width: 66px;
+        }
+        .big-p {
+          font-size: 16px;
+          font-weight: 400;
+        }
+        .small-p {
+          font-size: 14px;
+          font-weight: 400;
+        }
+        .contact-p {
+          font-size: 16px;
+          color: #2f2c2c;
+          line-height: 31px;
+        }
+        .flex {
+          flex-direction: column;
+          gap: 5px;
+        }
+        .padding {
+          padding: 0 20px;
+        }
+        .print-btn {
+          width: 97px !important;
+          height: 40px !important;
+        }
+        .print-icon {
+          width: 14px;
+          height: 14px;
+        }
+        .plane-icon {
+          width: 12px;
+          height: 11px;
+        }
+        .small-padd {
+          padding: 15px 20px !important;
+        }
+        .full-width {
+          width: 100%;
+        }
+        .hotel-width {
+          width: 0%;
+        }
+        .hotel-text-width {
+          width: 100%;
+          padding: 0px 20px;
+        }
+        .airline-icon {
+          width: 16px;
+          height: 16px;
+        }
+        .mobile-align {
+          text-align: left !important;
+          align-items: start !important;
+        }
+        .padd {
+          padding: 0;
+        }
+        .topMargin {
+          margin-top: 0;
+        }
+        .stopover {
+          align-items: flex-start !important;
+        }
+        .hide {
+          display: block;
+        }
+        .float {
+          display: flex;
+          flex-direction: row;
+        }
+        .bar {
+          width: 100px !important;
+        }
+        .table-text {
+          font-size: 12px;
+          color: #424950;
+          font-weight: 400;
+          line-height: 16px;
+        }
+        .table-header {
+          font-size: 14px;
+          color: #2f2c2c;
+          line-height: 18px;
+        }
+        .table-border {
+          border-bottom: 1px solid #ffece2;
+        }
+        .table-head-padding {
+          padding: 0 !important;
+        }
+        .hotel-header {
+          font-size: 12px;
+          color: #2f2c2c;
+          font-weight: 700;
+          line-height: 16px;
+        }
+        .hotel-text {
+          font-size: 10px;
+          color: #2f2c2c;
+          font-weight: 400;
+          line-height: 12px;
+        }
+        .hide-image {
+        display: none;
+      }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header" style="width: 100%">
+        <img
+          src="/images/Tramango logo-herkinmg 5.png"
+          alt="logo"
+          class="logo"
+          style="padding: 10px"
+        />
+      </div>
+      <table class="outer" role="presentation">
+        <tr>
+          <td style="display: flex; justify-content: center">
+            <!-- main table starts -->
+            <table
+              style="
+                width: 90%;
+                max-width: 1087px;
+                font-family: 'DM sans';
+                margin-bottom: 30px;
+              "
+            >
+              <tr>
+                <td>
+                  <p class="headerText">
+                    Thank you for booking with us, here are your flight details,
+                    your itinerary follows
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="text-align: center; padding-bottom: 20px">
+                  <button type="submit" class="print-btn">
+                    <img class="print-icon" src="/Vector (2).svg" alt="print" />
+                    <span
+                      class="big-p"
+                      style="
+                        color: #ffffff;
+                        padding-left: 5px;
+                        font-family: lato;
+                      "
+                      >Print</span
+                    >
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  class="padding"
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    gap: 3px;
+                    vertical-align: top;
+                  "
+                >
+                  <p class="big-p" style="font-weight: 500">Lagos</p>
+                  <img src="/Vector.svg" alt="plane" class="plane-icon" />
+                  <p class="big-p" style="font-weight: 500">Dubai</p>
+                  <img src="/Vector.svg" alt="plane" class="plane-icon" />
+                  <p class="big-p" style="font-weight: 500">Lagos</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="padding">
+                  <p
+                    class="small-p grey"
+                    style="margin-top: 8px;"
+                  >
+                    December 1 - January 16, Economy, 2 Adults, 1 Child
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  class="padding flex shadow small-padd"
+                  style="
+                    background-color: #ffffff;
+                    justify-content: space-between;
+                    margin: 20px 0px;
+                  "
+                >
+                  <p class="big-p" style="font-weight: 500">
+                    <span class="small-p" style="font-weight: 400"
+                      >BookingID: </span
+                    >TRM/09100
+                  </p>
+                  <p class="big-p" style="font-weight: 500">
+                    <span class="small-p" style="font-weight: 400">PNR: </span
+                    >TRA098
+                  </p>
+                  <p class="big-p" style="font-weight: 500">
+                    <span class="small-p" style="font-weight: 400"
+                      >Booking Date: </span
+                    >08 AUGUST,2021
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  class="shadow"
+                  style="padding: 30px 0; background-color: #ffffff"
+                >
+                  <!-- first table starts -->
+                  <table style="width: 100%">
+                    <tr>
+                      <td
+                        style="display: flex; flex-direction: row; gap: 5px"
+                        class="padding"
+                      >
+                        <p class="big-p" style="font-weight: 500">Lagos</p>
+                        <img src="/Vector.svg" alt="plane" class="plane-icon" />
+                        <p class="big-p" style="font-weight: 500">Dubai</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="padding">
+                        <p
+                          class="small-p grey"
+                          style="margin-top: 8px; margin-bottom: 16px"
+                        >
+                          7:30am - 6:30pm (10 hrs)1 stop
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="padding">
+                        <p
+                          class="small-p"
+                          style="
+                            margin-top: 8px;
+                            margin-bottom: 8px;
+                            color: #2f2c2c;
+                            font-weight: 500;
+                            line-height: 20px;
+                          "
+                        >
+                          Thur,20 January,&nbsp; &nbsp; Onward: &nbsp;<img src="/Vector (3).svg" alt="" width="18px" height="14px">
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- first table ends -->
+
+                  <!-- second table starts -->
+                  <table>
+                    <tr>
+                      <td
+                        class="padding flex padd"
+                        style="justify-content: space-between"
+                      >
+                        <div
+                          class="full-width flex-style topMargin"
+                          style="gap: 10px !important; align-items: center"
+                        >
+                          <img class="airline-icon" src="/Vector (1).svg" />
+                          <p class="small-p" style="font-weight: 500">
+                            Turkish Airways
+                          </p>
+                        </div>
+
+                        <div
+                          class="full-width mobile-align padd topMargin"
+                          style="text-align: right"
+                        >
+                          <p
+                            class="small-p"
+                            style="
+                              font-family: 'lato';
+                              padding: 5px 0;
+                              font-weight: 500;
+                            "
+                          >
+                            Lagos(LOS)
+                          </p>
+                          <p
+                            class="tiny-p grey"
+                            style="
+                              font-weight: 400;
+                              padding: 5px 0;
+                              line-height: 14px;
+                            "
+                          >
+                            Wed, 12 Feb, 13:40
+                          </p>
+                          <p
+                            class="tiny-p grey"
+                            style="
+                              font-weight: 400;
+                              padding: 5px 0;
+                              line-height: 14px;
+                            "
+                          >
+                            Murtala Muhammed Airport
+                          </p>
+                        </div>
+
+                        <div class="full-width float topMargin padd stopover">
+                          <div class="stopover">
+                            <p class="tiny-p" style="font-weight: 500">
+                              22h 05min
+                            </p>
+                            <hr class="bar" />
+                          </div>
+                          <div
+                            style="
+                              width: 130px;
+                              height: 24px;
+                              margin: 8px 0;
+                              background: rgba(255, 94, 13, 0.3);
+                              border-radius: 3px;
+                              padding: 5px;
+                            "
+                          >
+                            <p
+                              class="tiny-p"
+                              style="font-weight: 500; line-height: 14px"
+                            >
+                              2h stopover in Instabul
+                            </p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="full-width mobile-align padd topMargin"
+                          style="text-align: right"
+                        >
+                          <p
+                            class="small-p"
+                            style="
+                              font-family: 'lato';
+                              padding: 5px 0;
+                              font-weight: 500;
+                            "
+                          >
+                            Dubai(DXB)
+                          </p>
+                          <p
+                            class="tiny-p grey"
+                            style="
+                              font-weight: 400;
+                              padding: 5px 0;
+                              line-height: 14px;
+                            "
+                          >
+                            Wed, 12 Feb, 13:40
+                          </p>
+                          <p
+                            class="tiny-p grey"
+                            style="
+                              font-weight: 400;
+                              padding: 5px 0;
+                              line-height: 14px;
+                            "
+                          >
+                            Murtala Muhammed Airport
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- second table ends -->
+
+                  <!-- third table starts -->
+                  <table>
+                    <tr class="hide">
+                      <td class="padding">
+                        <p
+                          class="small-p"
+                          style="
+                            margin-top: 8px;
+                            margin-bottom: 8px;
+                            color: #2f2c2c;
+                            font-weight: 500;
+                            line-height: 20px;
+                          "
+                        >
+                          Sat,20 January,&nbsp; &nbsp; Return:  &nbsp;<img src="/Vector (4).svg" alt="" width="18px" height="14px">
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td
+                        class="padding flex padd"
+                        style="justify-content: space-between"
+                      >
+                        <div
+                          class="full-width flex-style topMargin"
+                          style="gap: 10px !important; align-items: center"
+                        >
+                          <img class="airline-icon" src="/Vector (1).svg" />
+                          <p class="small-p" style="font-weight: 500">
+                            Turkish Airways
+                          </p>
+                        </div>
+
+                        <div
+                          class="full-width mobile-align padd topMargin"
+                          style="text-align: right"
+                        >
+                          <p
+                            class="small-p"
+                            style="
+                              font-family: 'lato';
+                              padding: 5px 0;
+                              font-weight: 500;
+                            "
+                          >
+                            Lagos(LOS)
+                          </p>
+                          <p
+                            class="tiny-p grey"
+                            style="
+                              font-weight: 400;
+                              padding: 5px 0;
+                              line-height: 14px;
+                            "
+                          >
+                            Wed, 12 Feb, 13:40
+                          </p>
+                          <p
+                            class="tiny-p grey"
+                            style="
+                              font-weight: 400;
+                              padding: 5px 0;
+                              line-height: 14px;
+                            "
+                          >
+                            Murtala Muhammed Airport
+                          </p>
+                        </div>
+
+                        <div
+                          class="full-width topMargin padd stopover"
+                          style="
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                          "
+                        >
+                          <p class="tiny-p" style="font-weight: 500">
+                            22h 05min
+                          </p>
+                          <hr
+                            style="
+                              width: 116px;
+                              margin: 8px 0;
+                              border: 1px solid rgba(255, 94, 13, 0.3);
+                            "
+                          />
+                        </div>
+
+                        <div
+                          class="full-width mobile-align padd topMargin"
+                          style="text-align: right"
+                        >
+                          <p
+                            class="small-p"
+                            style="
+                              font-family: 'lato';
+                              padding: 5px 0;
+                              font-weight: 500;
+                            "
+                          >
+                            Dubai(DXB)
+                          </p>
+                          <p
+                            class="tiny-p grey"
+                            style="
+                              font-weight: 400;
+                              padding: 5px 0;
+                              line-height: 14px;
+                            "
+                          >
+                            Wed, 12 Feb, 13:40
+                          </p>
+                          <p
+                            class="tiny-p grey"
+                            style="
+                              font-weight: 400;
+                              padding: 5px 0;
+                              line-height: 14px;
+                            "
+                          >
+                            Murtala Muhammed Airport
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- third table ends -->
+                </td>
+              </tr>
+              <!-- passengers table -->
+
+              <tr>
+                <td>
+                  <p
+                    class="big-p mobile-align passenger-margin"
+                    style="
+                      font-weight: 700;
+                      line-height: 31.25px;
+                      text-align: center;
+                    "
+                  >
+                    Passenger Information
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="table-head-padding">
+                  <p
+                    class="table-header passenger-margin"
+                    style="
+                      font-weight: 700;
+                      line-height: 23px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    Passenger 1
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="padding" style="background-color: #ffffff">
+                  <table>
+                    <tr style="width: 100%">
+                      <td
+                        class="table-text table-border"
+                        style="padding: 10px 0px"
+                      >
+                        Name:
+                      </td>
+                      <td
+                        class="table-text table-border"
+                        style="text-align: right"
+                      >
+                        John Doe
+                      </td>
+                    </tr>
+
+                    <tr style="width: 100%">
+                      <td
+                        class="table-text table-border"
+                        style="padding: 10px 0px"
+                      >
+                        Passport number:
+                      </td>
+                      <td
+                        class="table-text table-border"
+                        style="text-align: right"
+                      >
+                        678900083098
+                      </td>
+                    </tr>
+
+                    <tr style="width: 100%">
+                      <td
+                        class="table-text table-border"
+                        style="padding: 10px 0px"
+                      >
+                        Email Address:
+                      </td>
+                      <td
+                        class="table-text table-border"
+                        style="text-align: right"
+                      >
+                        johndoe@gmail.com
+                      </td>
+                    </tr>
+
+                    <tr style="width: 100%">
+                      <td
+                        class="table-text table-border"
+                        style="padding: 10px 0px"
+                      >
+                        Phone Number:
+                      </td>
+                      <td
+                        class="table-text table-border"
+                        style="text-align: right"
+                      >
+                        08100709809
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="table-head-padding">
+                  <p
+                    class="table-header passenger-margin"
+                    style="
+                      font-weight: 700;
+                      line-height: 23px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    Passenger 2
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="padding" style="background-color: #ffffff">
+                  <table>
+                    <tr style="width: 100%">
+                      <td
+                        class="table-text table-border"
+                        style="padding: 10px 0px"
+                      >
+                        Name:
+                      </td>
+                      <td
+                        class="table-text table-border"
+                        style="text-align: right"
+                      >
+                        John Doe
+                      </td>
+                    </tr>
+
+                    <tr style="width: 100%">
+                      <td
+                        class="table-text table-border"
+                        style="padding: 10px 0px"
+                      >
+                        Passport number:
+                      </td>
+                      <td
+                        class="table-text table-border"
+                        style="text-align: right"
+                      >
+                        678900083098
+                      </td>
+                    </tr>
+
+                    <tr style="width: 100%">
+                      <td
+                        class="table-text table-border"
+                        style="padding: 10px 0px"
+                      >
+                        Email Address:
+                      </td>
+                      <td
+                        class="table-text table-border"
+                        style="text-align: right"
+                      >
+                        johndoe@gmail.com
+                      </td>
+                    </tr>
+
+                    <tr style="width: 100%">
+                      <td
+                        class="table-text table-border"
+                        style="padding: 10px 0px"
+                      >
+                        Phone Number:
+                      </td>
+                      <td
+                        class="table-text table-border"
+                        style="text-align: right"
+                      >
+                        08100709809
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <table style="margin-top: 24px">
+                    <tr>
+                      <td
+                        class="flex"
+                        style="
+                          gap: 20px;
+                          border: 0.8px solid #ffece2;
+                          padding: 20px;
+                          border-radius: 7px;
+                        "
+                      >
+                        <div class="hotel-width">
+                          <img class="hide-image"
+                            src="/images/Rectangle 1244.png"
+                            alt="hotel image"
+                            style="
+                              max-width: 396px;
+                              width: 100%;
+                              height: auto;
+                              object-fit: contain;
+                            "
+                          />
+                        </div>
+                        <div class="hotel-text-width" style="text-align: center; ">
+                          <p class="hotel-header">
+                            Book Top rated hotels at amazing deals
+                          </p>
+                          <p class="hotel-text" style="margin: 10px 0">
+                            You can always book hotels at amazing deals and also
+                            enjoy awesome discounts when you book. it's super
+                            easy and fast.
+                          </p>
+                          <button type="submit" class="hotel-text hotel-btn">
+                            Book Hotels
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="table-head-padding">
+                  <p
+                    class="fare-text mobile-align"
+                    style="
+                      margin-top: 48px;
+                      margin-bottom: 5px;
+                      text-align: center;
+                    "
+                  >
+                    Fare Breakdown
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="table-padding" style="margin-bottom: 0">
+                  <table>
+                    <tr style="width: 100%">
+                      <td
+                        class="small-p grey table-border"
+                        style="padding: 10px 0px"
+                      >
+                        Purchase Date:
+                      </td>
+                      <td
+                        class="small-p table-border"
+                        style="text-align: right"
+                      >
+                        09 July,2021
+                      </td>
+                    </tr>
+
+                    <tr style="width: 100%">
+                      <td
+                        class="small-p grey table-border"
+                        style="padding: 10px 0px"
+                      >
+                        Purchase Method:
+                      </td>
+                      <td
+                        class="small-p table-border"
+                        style="text-align: right"
+                      >
+                        Debit/Credit card
+                      </td>
+                    </tr>
+
+                    <tr style="width: 100%">
+                      <td
+                        class="small-p grey table-border"
+                        style="padding: 10px 0"
+                      >
+                        Billing Name:
+                      </td>
+                      <td
+                        class="small-p table-border"
+                        style="text-align: right"
+                      >
+                        John Doe
+                      </td>
+                    </tr>
+
+                    <tr style="width: 100%">
+                      <td
+                        class="small-p grey table-border"
+                        style="padding: 10px 0px"
+                      >
+                        Ticket Booking:
+                      </td>
+                      <td
+                        class="small-p table-border"
+                        style="text-align: right"
+                      >
+                        NGN 45,000
+                      </td>
+                    </tr>
+
+                    <tr style="width: 100%">
+                      <td class="small-p grey" style="padding: 10px 0px">
+                        Tax Fare:
+                      </td>
+                      <td class="small-p" style="text-align: right">
+                        NGN 45,000
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <table style="padding: 10px 0">
+                    <tr
+                      style="
+                        width: 100%;
+                        background-color: #ff5e0d;
+                        padding: 10px 0;
+                      "
+                    >
+                      <td
+                        class="small-p table-padding table-border"
+                        style="color: #ffffff"
+                      >
+                        Total Fare:
+                      </td>
+                      <td
+                        class="small-p table-padding table-border"
+                        style="text-align: right; color: #ffffff"
+                      >
+                        NGN 75,000
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p
+                    class="fare-text mobile-align passenger-margin"
+                    style="margin-bottom: 5px"
+                  >
+                    Contact Information
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  class="passenger-margin flex"
+                  style="
+                    justify-content: space-between;
+                    margin-top: 10px !important;
+                  "
+                >
+                  <p class="contact-p" style="font-weight: 500">
+                    Phone Number: 081003456110
+                  </p>
+                  <p class="contact-p" style="font-weight: 500">
+                    Tramango Trip Number: TRA/203456
+                  </p>
+                  <p class="contact-p" style="font-weight: 500">
+                    Website:
+                    <a href="#" style="text-decoration: none; color: #ff5e0d"
+                      >www.tramango.com</a
+                    >
+                  </p>
+                </td>
+              </tr>
+            </table>
+            <!-- main table ends -->
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
